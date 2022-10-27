@@ -6,7 +6,7 @@
   <%= f.submit :'Submit' %>
 <% end %>
 
-<% if @search_field %>
+<% if @search_field &&  %>
   <h2> Merchant Matching '<%=@search_field%>' </h2>
 
   <%= link_to "#{@merchant.name}", "/merchants/#{@merchant.id}" %>

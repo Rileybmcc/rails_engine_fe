@@ -22,7 +22,9 @@ RSpec.describe 'Merchant Show Page', :vcr do
   end
 
   it ' stuffs ' do
-    visit items_path
+    visit "/"
+    fillin 'search', with: ''
+    click_on 'submit'
   end
 
 end
