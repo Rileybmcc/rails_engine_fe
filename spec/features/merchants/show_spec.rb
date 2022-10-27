@@ -21,5 +21,8 @@ RSpec.describe 'Merchant Show Page', :vcr do
     expect(current_path).to eq("/items/4")
   end
 
+  it ' stuffs ' do
+    visit items_path
+  end
 
 end

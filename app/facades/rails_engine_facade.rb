@@ -25,4 +25,10 @@ class RailsEngineFacade
     json[:data].map { |item| Item.new(item[:attributes], item[:id]) }
   end
 
+  def self.search_for(search_params)
+    json = RailsEngineService.merchant_by_partial(search_params)
+require "pry"; binding.pry
+    Merchant.new(json[:data][:attributes], json[:data][:id])
+  end
+
 end

@@ -1,7 +1,7 @@
 class ItemsController < ApplicationController
 
   def index
-    @items = RailsEngineFacade.items
+    @items = RailsEngineFacade.all_items
   end
 
   def show

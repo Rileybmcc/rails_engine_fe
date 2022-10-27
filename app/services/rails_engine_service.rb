@@ -31,10 +31,14 @@ class RailsEngineService
     parse(response.body)
   end
 
-  def items
+  def self.items
     response = conn.get('api/v1/items')
     parse(response.body)
   end
 
+  def self.merchant_by_partial(search_params)
+    response = conn.get("api/v1/merchants/find?name=#{search_params}")
+    parse(response.body)
+  end
 
 end
